@@ -1,0 +1,17 @@
+<ul>
+  <h3>Products</h3>
+  <li *ngFor="let product of products">
+     
+      <button class="dtl-link"(click)="add(product)">Add</button>
+      <a routerLink="/detail/{{product.id}}">
+        <span class="badge">{{product.id}}</span> 
+        <span class="badge">{{product.name}}</span>
+      </a>
+       
+      
+      
+     
+  </li>
+
+  
+</ul>

@@ -1,0 +1,15 @@
+<h1>hgfhhfgh
+
+</h1>
+<ul>
+    <li class="card" *ngFor="let product of cartProducts;let i=index">
+        
+           
+            <span class="badge">{{product.id}}</span> 
+            <span class="badge">{{product.name}}</span>
+            <button class="dtl-link"(click)="deleteFc(i)">
+                    delete
+            </button>
+        
+</li>
+</ul>
