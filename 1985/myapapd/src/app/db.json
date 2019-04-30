@@ -1,24 +1,57 @@
 {
-  "products":[
+  "products": [
     {
       "name": "Холодильник",
-      "id": 1
+      "id": 1,
+      "price": 100,
+      "image": "assets/images/холодильник.jpg",
+      "category": "бытовая техника"
     },
     {
       "name": "Микроволновка",
-      "id": 2
+      "id": 2,
+      "price": 130,
+      "image": "assets/images/микроволновка.jpg",
+      "category": "электроника"
     },
     {
       "name": "Плита",
-      "id": 3
+      "id": 3,
+      "price": 140,
+      "image": "assets/images/плита.jpg",
+      "category": "электроника"
     },
     {
       "name": "Стиральная машина",
-      "id": 4
+      "id": 4,
+      "price": 195,
+      "image": "assets/images/стиральная машинка.jpg",
+      "category": "бытовая техника"
     },
     {
       "name": "Вытяжка",
-      "id": 5
+      "id": 5,
+      "price": 85,
+      "image": "assets/images/вытяжка.jpg",
+      "category": "бытовая техника"
+    }
+  ],
+  "cartProducts": [
+    {
+      "name": "Микроволновка",
+      "id": 2,
+      "price": 130,
+      "image": "assets/images/микроволновка.jpg",
+      "category": "электроника",
+      "count": 2
+    },
+    {
+      "name": "Холодильник",
+      "id": 1,
+      "price": 100,
+      "image": "assets/images/холодильник.jpg",
+      "category": "бытовая техника",
+      "count": 6
     }
   ]
 }

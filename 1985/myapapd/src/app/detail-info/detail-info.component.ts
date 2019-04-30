@@ -9,7 +9,7 @@ import { Location } from '@angular/common';
   styleUrls: ['./detail-info.component.css']
 })
 export class DetailInfoComponent implements OnInit {
-  @Input() product:Product;
+  product:Product;
 
   constructor(private location: Location,
               private route: ActivatedRoute,

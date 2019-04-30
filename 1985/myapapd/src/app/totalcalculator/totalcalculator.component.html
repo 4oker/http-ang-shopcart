@@ -1,0 +1,19 @@
+<ul>
+    <div class="muted">
+      <h2 class="your-cart">Your Product Cart</h2>
+      <h3 class="totalCn"> {{counts}}</h3>
+      </div>
+  <li *ngFor="let cartproduct of cartproducts">
+    <div>
+      <h4>Item:{{cartproduct.name}}</h4>
+    </div>
+    <span>Price: {{cartproduct.price}}</span>
+  </li>
+  <hr>
+  <li>
+          
+    <strong>Total sum: {{cost}}</strong>
+  </li>
+
+ 
+  </ul>

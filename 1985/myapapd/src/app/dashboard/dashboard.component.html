@@ -1,15 +1,35 @@
-<h1>hgfhhfgh
 
-</h1>
-<ul>
-    <li class="card" *ngFor="let product of cartProducts;let i=index">
-        
+
+
+<ul class="lst">
+        <li class="list" *ngFor="let cartproduct of cartproducts">
            
-            <span class="badge">{{product.id}}</span> 
-            <span class="badge">{{product.name}}</span>
-            <button class="dtl-link"(click)="deleteFc(i)">
+            
+            
+              <img [src]="cartproduct.image">
+              <span class="badge">{{cartproduct.id}}</span> 
+              <span class="name">Наименование товара:  {{cartproduct.name}}</span>
+              
+              <span class="price">{{cartproduct.count}}</span>
+              <span class="price">Стоимость одной единицы:  {{cartproduct.price}}</span>
+              <span class="price">Общая стоимость:{{cartproduct.price*cartproduct.count}}</span>
+              
+           <div class="block-btn"><button class="minplu" (click)="minus(cartproduct)">-</button>
+                <button class="minplu" [disabled]="status" (click)="plus(cartproduct)">+</button></div>
+            
+            <a class="add" (click)="deleteFc(cartproduct)">
                     delete
-            </button>
-        
-</li>
-</ul>
+            </a>
+             
+            
+            
+           
+          </li>
+          <li><span>Total{{total}}</span></li>
+      </ul>
+      
+      
+      
+
+    
+    

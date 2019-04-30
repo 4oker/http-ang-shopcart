@@ -1,17 +1,37 @@
-<ul>
-  <h3>Products</h3>
-  <li *ngFor="let product of products">
+<span>cbc{{total}}</span>
+<span>{{cnt}}</span>
+<div>
+  
+      
+   
+    <div class="search-form-field">
+        <label for="brand_select">Выбрать категорию:</label>
+        <select class="form-control" name="All" id="brand_select" [(ngModel)]="type">
+            <option *ngFor="let brand of brands" [ngValue]="brand">{{brand}}</option>
+          </select>
+        
+      </div>
+    
+    
+</div>
+<ul class="lst">
+  <li class="list" *ngFor="let product of products | filter:type">
      
-      <button class="dtl-link"(click)="add(product)">Add</button>
+      
       <a routerLink="/detail/{{product.id}}">
+        <img [src]="product.image">
+        <span class="badge">{{product.category}}</span> 
         <span class="badge">{{product.id}}</span> 
-        <span class="badge">{{product.name}}</span>
+        <span class="name">{{product.name}}</span>
+        <span class="price">{{product.price}} $ dollars</span>
+        
       </a>
+      <button class="ad" [disabled]="status"  (click)="add(product)">Add to Cart</button>
        
       
       
      
-  </li>
-
-  
+    </li>
 </ul>
+
+

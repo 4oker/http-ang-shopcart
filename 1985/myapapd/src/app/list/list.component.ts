@@ -1,6 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-import { Product } from '../../skelet';
+import { Product, CartProduct } from '../../skelet';
 import { BugService } from '../bug.service';
+import {FilterPipe} from '../filter.pipe';
+
+
 
 @Component({
   selector: 'app-list',
@@ -8,30 +11,53 @@ import { BugService } from '../bug.service';
   styleUrls: ['./list.component.css']
 })
 export class ListComponent implements OnInit {
-
+  status:boolean;
   products: Product[]=[];
-
-  constructor(private BugService: BugService) {
+  product:Product
+  
+  cartProducts: Product[]=[];
+  type:'All'
+  brands = ['All','электроника', 'бытовая техника'];
+  cnt:number=0;
+  
+  constructor(private BugService: BugService,
+             ) {
     
    }
 
   ngOnInit() {
+    
+    
     this.getProducts();
     
   }
-
+  
+  
+  
   getProducts(): void {
     this.BugService.getProducts()
       .subscribe(products => this.products = products)
   }
   
   add(product:Product):void{
-    
+  
     this.BugService.addProduct(product)
+  
+   
+   
+     
     
-    
+     
   }
+
+
+  
+
+
+  }
+
  
+  
 
 
-}
+
